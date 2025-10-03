@@ -1,0 +1,26 @@
+Create the virtual environment: Use the python3 -m venv command followed by the desired name for your virtual environment
+code:	    python3 -m venv venv
+This creates a new directory named venv (or whatever you named it) containing a self-contained Python installation and its associated scripts.
+
+Activate the virtual environment: To use the isolated environment, activate it using the source command
+code: 	    source venv/bin/activate
+Your shell prompt will change to indicate the active environment, typically by prepending the environment's name in parentheses (e.g., (venv) user@hostname:~/project$).
+
+Deactivate the virtual environment: When you are finished working in the virtual environment, you can deactivate it to return to your system's global Python environment.
+code:		deactivate
+
+
+					Using the Virtual Environment
+Install packages: Once activated, any packages installed using pip will be installed within this specific virtual environment and will not affect the global Python installation or other virtual environments.
+code:		pip install requests
+
+Run Python scripts: When the virtual environment is active, running python will execute the Python interpreter from within that environment.
+code:		python your_script.py
+
+
+					Managing Dependencies
+Generate a requirements.txt file: To share your project's dependencies or recreate the environment, you can generate a requirements.txt file listing all installed packages.
+code:	  	pip freeze > requirements.txt
+
+Install dependencies from requirements.txt: In a new or different virtual environment, you can install all required packages from a requirements.txt file.
+code:	        pip install -r requirements.txt
